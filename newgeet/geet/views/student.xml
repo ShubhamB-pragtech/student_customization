@@ -1,0 +1,48 @@
+<odoo>
+    <data>
+        <record id="student4_action" model="ir.actions.act_window">
+            <field name="name">student</field>
+            <field name="res_model">geet.student</field>
+            <field name="view_mode">form,tree</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create Student
+                </p>
+            </field>
+        </record>
+        <record id="geet_student_tree_view" model="ir.ui.view">
+            <field name="name">geet.student.tree</field>
+            <field name="model">geet.student</field>
+            <field name="arch" type="xml">
+                <tree string="Student">
+                    <field name="name"/>
+                    <field name="age"/>
+                </tree>
+            </field>
+        </record>
+        <record id="geet_student_form_view" model="ir.ui.view">
+            <field name="name">geet.student.form</field>
+            <field name="model">geet.student</field>
+            <field name="arch" type="xml">
+                <form string="Student">
+
+                    <group>
+                        <field name="name"/>
+                        <field name="age"/>
+
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+        <menuitem id="geet_menu_root"
+                  name="Student"
+                  sequence="1"/>
+        <menuitem id="student_one_menu_root"
+                  name="Student"
+                  parent="geet.geet_menu_root"
+                  action="student4_action"
+                  sequence="1"/>
+    </data>
+</odoo>
