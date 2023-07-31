@@ -17,6 +17,7 @@
                 <tree string="Student">
                     <field name="name"/>
                     <field name="age"/>
+                    <field name="classes"/>
                 </tree>
             </field>
         </record>
@@ -29,6 +30,7 @@
                     <group>
                         <field name="name"/>
                         <field name="age"/>
+                        <field name="classes"/>
 
                     </group>
                 </form>

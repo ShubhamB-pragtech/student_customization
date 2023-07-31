@@ -3,4 +3,5 @@ class Student(models.Model):
     _name = 'geet.student'
     _description = 'Student'
     name = fields.Char(string="Name")
+    classes = fields.Char(string="class")
     age = fields.Integer(string="age")
