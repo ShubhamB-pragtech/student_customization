@@ -6,7 +6,7 @@ class Student(models.Model):
     classes = fields.Char(string="class")
     age = fields.Integer(string="age")
     status = fields.Selection([('public', 'Public',), ('private', 'Private')], string="status", readonly=True,
-                              default="private")
+                              default="public")
 
     def orm_method(self):
         search_var = self.env['geet.student'].browse([4])
