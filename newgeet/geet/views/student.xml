@@ -1,9 +1,9 @@
 <odoo>
     <data>
-        <record id="student4_action" model="ir.actions.act_window">
+        <record id="student5_action" model="ir.actions.act_window">
             <field name="name">student</field>
             <field name="res_model">geet.student</field>
-            <field name="view_mode">form,tree</field>
+            <field name="view_mode">tree,form</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Create Student
@@ -27,11 +27,19 @@
             <field name="arch" type="xml">
                 <form string="Student">
 
+                    <header>
+                        <field name="status" widget="statusbar"/>
+
+                        <button name="orm_method" string="check orm" type="object" class="oe_highlight"/>
+                        <button name="orm_create_method" string="check create orm" type="object" class="oe_highlight"/>
+                        <button name="orm_write_method" string="check write orm" type="object" class="oe_highlight"/>
+                        <button name="orm_unlink_method" string="check unlink orm" type="object" class="oe_highlight"/>
+                    </header>
+
                     <group>
                         <field name="name"/>
                         <field name="age"/>
                         <field name="classes"/>
-
                     </group>
                 </form>
             </field>
@@ -42,9 +50,9 @@
                   name="Student"
                   sequence="1"/>
         <menuitem id="student_one_menu_root"
-                  name="Student"
+                  name="Student1"
                   parent="geet.geet_menu_root"
-                  action="student4_action"
+                  action="geet.student5_action"
                   sequence="1"/>
     </data>
 </odoo>

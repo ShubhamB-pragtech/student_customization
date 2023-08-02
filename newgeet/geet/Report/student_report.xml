@@ -1,0 +1,91 @@
+
+<odoo>
+    <data>
+<!--        <template id="custom_layout">-->
+
+
+<!--            <div class="header">-->
+<!--                <div class="text-center" style="border-bottom: 1px solid black;">-->
+<!--                    <div style="border-top: 1px solid #000; margin-top: 20px; margin-bottom: 20px;">-->
+<!--                        <h1 style="text-align:center;">DY Patil College</h1>-->
+<!--                        <p style="text-align:center;">Address: Near Bhekarai-Nagar</p>-->
+<!--                        <p style="text-align:center;">Phone: 123-456-7890</p>-->
+<!--                        <div class="row">-->
+
+
+<!--                        </div>-->
+
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--            </div>-->
+
+
+<!--            <div class="article o_report_layout_standard">-->
+<!--                <t t-out="0" />-->
+<!--            </div>-->
+
+<!--            <div class="footer o_standard_footer">-->
+<!--                <div class="text-center" style="border-top: 1px solid black;">-->
+<!--                    <br /> Page<p>-->
+<!--                        <span class="page" />-->
+<!--                    </p>-->
+
+
+<!--                </div>-->
+
+<!--            </div>-->
+<!--        </template>-->
+        <template id="school_class_report_qweb_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div style="width:100%; text-align:center; font-size:30px">
+                            <h10>
+                                <strong>School class Report</strong>
+                            </h10>
+                        </div>
+                        <br/><br/>
+
+                        <div class="page">
+
+                            <div class="column mt32 mb32">
+                                <div class="col-auto col-3 mw-100 mb-2">
+                                    <strong>Name</strong>
+                                    <p class="m-0" t-field="o.name" />
+                                </div>
+                            </div>
+                            <div class="column mt32 mb32">
+                                <div class="col-auto col-3 mw-100 mb-2">
+                                    <strong> address </strong>
+                                    <p class="m-0" t-field="o.age" />
+                                </div>
+                            </div>
+                             <div class="column mt32 mb32">
+                                <div class="col-auto col-3 mw-100 mb-2">
+                                    <strong> address </strong>
+                                    <p class="m-0" t-field="o.classes" />
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+
+    </data>
+    <report
+        id="class_report_id"
+        model="geet.student"
+        string="Print class Report"
+        name="geet.school_class_report_qweb_template"
+        file="geet.school_class_report_qweb_template"
+    />
+
+</odoo>
+<!--apps-fileview.texmex_20230622.01_p0-->
+<!--student_report.xml-->
+<!--Displaying student_report.xml.-->
