@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="assets_backend_dashboard_inherit" name="picking_dashboard" inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/geet/static/src/css/index.css"/>
+        </xpath>
+    </template>
+</odoo>

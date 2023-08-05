@@ -20,18 +20,24 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','website', 'web'],
+
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'Report/student_report.xml',
+        'views/index.xml',
         'views/views.xml',
         'views/templates.xml',
         'views/student.xml',
+        'static/src/xml/index_temp.xml',
+        'static/src/xml/Boot_temp.xml',
+
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
+    # 'qweb': ['static/src/xml/index_temp.xml'],
 }
